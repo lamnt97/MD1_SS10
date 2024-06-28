@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 6;
+        let result = ++a + a + a++ + ++a + a; //7+7+7+9+9+  // Lần 1: ++a thì a = 6 ---> a = 7
+                                                            // Lân 2: a thì a = 7
+                                                            // Lần 3: a++ thì a đang = 7 sau biểu thức sẽ thành a=8 ở dòng tiếp theo
+                                                            // Lần 4: sau lần 3 thì a đang =8 thì ++a nên a sẽ thêm 1 đơn vị thành a=9
+                                                            // Lần 5: a đang là a = 9                                       
+        console.log(result)
+
+        //let result2 = a++ + a + a++ + ++a + a //6+7+7+9=9  
+        //console.log(result2)
+    </script>
+    
+</body>
+</html>
